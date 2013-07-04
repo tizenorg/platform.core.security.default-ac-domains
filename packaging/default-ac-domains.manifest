@@ -1,0 +1,24 @@
+<manifest>
+  <define>
+    <domain name="System"/>
+    <provide>
+      <label name="System::Shared"/>
+    </provide>
+    <request>
+      <smack request="System::Shared" type="rwxat"/>
+    </request>
+  </define>
+  <define>
+    <domain name="User"/>
+    <request>
+      <smack request="System" type="w"/>
+      <smack request="System::Shared" type="rx"/>
+    </request>
+    <permit>
+      <smack permit="System" type="w"/>
+    </permit>
+  </define>
+  <request>
+    <domain name="_"/>
+  </request>
+</manifest>

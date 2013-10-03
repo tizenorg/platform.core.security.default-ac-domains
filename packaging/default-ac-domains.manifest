@@ -6,16 +6,21 @@
     </provide>
     <request>
       <smack request="System::Shared" type="rwxat"/>
+      <smack request="_" type="rwxat"/>
     </request>
+    <permit>
+      <smack permit="_" type="rwxat"/>
+    </permit>
   </define>
   <define>
     <domain name="User"/>
     <request>
-      <smack request="System" type="w"/>
+      <smack request="System" type="rwxat"/>
       <smack request="System::Shared" type="rx"/>
+      <smack request="_" type="rwxat"/>
     </request>
     <permit>
-      <smack permit="System" type="w"/>
+      <smack permit="System" type="rwxat"/>
     </permit>
   </define>
   <request>

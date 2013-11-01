@@ -1,6 +1,6 @@
 <manifest>
   <define>
-    <domain name="System"/>
+    <domain name="System" policy="shared"/>
     <provide>
       <label name="System::Shared"/>
       <label name="System::Run"/>
@@ -15,7 +15,7 @@
     </permit>
   </define>
   <define>
-    <domain name="^"/>
+    <domain name="^" policy="shared"/>
     <request>
       <smack request="System" type="rwxa"/>
       <smack request="System::Run" type="rwxat"/>
@@ -25,7 +25,7 @@
     </permit>
   </define>
   <define>
-    <domain name="User"/>
+    <domain name="User" policy="shared"/>
     <request>
       <smack request="System" type="wx"/>
       <smack request="System::Shared" type="rx"/>

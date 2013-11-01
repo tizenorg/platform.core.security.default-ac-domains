@@ -3,19 +3,36 @@
     <domain name="System"/>
     <provide>
       <label name="System::Shared"/>
+      <label name="System::Run"/>
     </provide>
     <request>
       <smack request="System::Shared" type="rwxat"/>
+      <smack request="System::Run" type="rwxat"/>
     </request>
+    <permit>
+      <smack permit="_" type="wx"/>
+      <smack permit="_" to="System::Run" type="rwxat"/>
+    </permit>
+  </define>
+  <define>
+    <domain name="^"/>
+    <request>
+      <smack request="System" type="rwxa"/>
+      <smack request="System::Run" type="rwxat"/>
+    </request>
+    <permit>
+      <smack permit="System" type="rwxa"/>
+    </permit>
   </define>
   <define>
     <domain name="User"/>
     <request>
-      <smack request="System" type="w"/>
+      <smack request="System" type="wx"/>
       <smack request="System::Shared" type="rx"/>
+      <smack request="System::Run" type="rwxat"/>
     </request>
     <permit>
-      <smack permit="System" type="w"/>
+      <smack permit="System" type="rwx"/>
     </permit>
   </define>
   <request>

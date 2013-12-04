@@ -8,6 +8,7 @@
     <request>
       <smack request="System::Shared" type="rwxat"/>
       <smack request="System::Run" type="rwxat"/>
+      <smack request="_" type="l"/>
     </request>
     <permit>
       <smack permit="_" type="wx"/>
@@ -30,6 +31,7 @@
       <smack request="System" type="wx"/>
       <smack request="System::Shared" type="rx"/>
       <smack request="System::Run" type="rwxat"/>
+      <smack request="_" type="l"/>
     </request>
     <permit>
       <smack permit="System" type="rwx"/>

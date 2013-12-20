@@ -4,10 +4,12 @@
     <provide>
       <label name="System::Shared"/>
       <label name="System::Run"/>
+      <label name="System::Log"/>
     </provide>
     <request>
       <smack request="System::Shared" type="rwxat"/>
       <smack request="System::Run" type="rwxat"/>
+      <smack request="System::Log" type="rwxa"/>
       <smack request="_" type="l"/>
     </request>
     <permit>
@@ -20,6 +22,7 @@
     <request>
       <smack request="System" type="rwxa"/>
       <smack request="System::Run" type="rwxat"/>
+      <smack request="System::Log" type="rwxa"/>
     </request>
     <permit>
       <smack permit="System" type="rwxa"/>
@@ -31,6 +34,7 @@
       <smack request="System" type="wx"/>
       <smack request="System::Shared" type="rx"/>
       <smack request="System::Run" type="rwxat"/>
+      <smack request="System::Log" type="rwxa"/>
       <smack request="_" type="l"/>
     </request>
     <permit>

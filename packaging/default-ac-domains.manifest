@@ -30,11 +30,17 @@
   </define>
   <define>
     <domain name="User" policy="shared"/>
+    <provide>
+      <label name="User::Home"/>
+      <label name="User::App::Shared"/>
+    </provide>
     <request>
       <smack request="System" type="wx"/>
       <smack request="System::Shared" type="rx"/>
       <smack request="System::Run" type="rwxat"/>
       <smack request="System::Log" type="rwxa"/>
+      <smack request="User::Home" type="rwxat"/>
+      <smack request="User::App:Shared" type="rwxat"/>
       <smack request="_" type="l"/>
     </request>
     <permit>

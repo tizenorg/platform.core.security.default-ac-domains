@@ -36,7 +36,7 @@
     </provide>
     <request>
       <smack request="System" type="wx"/>
-      <smack request="System::Shared" type="rx"/>
+      <smack request="System::Shared" type="rxl"/>
       <smack request="System::Run" type="rwxat"/>
       <smack request="System::Log" type="rwxa"/>
       <smack request="User::Home" type="rwxat"/>

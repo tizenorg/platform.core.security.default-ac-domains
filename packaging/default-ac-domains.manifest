@@ -10,7 +10,7 @@
       <smack request="System::Shared" type="rwxat"/>
       <smack request="System::Run" type="rwxat"/>
       <smack request="System::Log" type="rwxa"/>
-      <smack request="User::Home" type="rwxa"/>
+      <smack request="User::Home" type="rwxat"/>
       <smack request="User::App::Shared" type="rwxa"/>
     </request>
     <permit>

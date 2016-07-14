@@ -20,14 +20,32 @@
     </permit>
   </define>
   <define>
+    <domain name="System::Privileged" policy="shared"/>
+    <request>
+      <smack request="System" type="rwxat"/>
+      <smack request="System::Shared" type="rwxat"/>
+      <smack request="System::Run" type="rwxat"/>
+      <smack request="System::Log" type="rwxa"/>
+      <smack request="User::Home" type="rwxat"/>
+      <smack request="User::App::Shared" type="rwxat"/>
+      <smack request="_" type="rwx"/>
+    </request>
+    <permit>
+      <smack permit="_" type="wx"/>
+      <smack permit="System" type="rwxat"/>
+    </permit>
+  </define>
+  <define>
     <domain name="^" policy="shared"/>
     <request>
       <smack request="System" type="rwxa"/>
+      <smack request="System::Privileged" type="rwxa"/>
       <smack request="System::Run" type="rwxat"/>
       <smack request="System::Log" type="rwxa"/>
     </request>
     <permit>
       <smack permit="System" type="rwxa"/>
+      <smack permit="System::Privileged" type="rwxa"/>
     </permit>
   </define>
   <define>
@@ -38,6 +56,7 @@
     </provide>
     <request>
       <smack request="System" type="wx"/>
+      <smack request="System::Privileged" type="wx"/>
       <smack request="System::Shared" type="rxl"/>
       <smack request="System::Run" type="rwxat"/>
       <smack request="System::Log" type="rwxa"/>
@@ -46,6 +65,7 @@
     </request>
     <permit>
       <smack permit="System" type="rwx"/>
+      <smack permit="System::Privileged" type="rwx"/>
     </permit>
   </define>
   <request>

@@ -16,7 +16,7 @@
     </request>
     <permit>
       <smack permit="_" type="wx"/>
-      <smack permit="_" to="System::Run" type="rwxat"/>
+      <smack permit="_" to="System::Run" type="wx"/>
     </permit>
   </define>
   <define>
